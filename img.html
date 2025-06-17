@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Image Gallery</title>
+  <link rel="stylesheet" href="img.css" />
+</head>
+<body>
+
+  <h1>Simple Image Gallery</h1>
+
+  <div class="gallery">
+    <img src="image/20240704_224055.jpg" onclick="showImage(this)" alt="Image 1">
+    <img src="image/IMG_20231108_210626_349.jpg" onclick="showImage(this)" alt="Image 2">
+    <img src="image/IMG_20231231_134637_857.jpg" onclick="showImage(this)" alt="Image 3">
+    <img src="image/IMG_20240103_222147_456.jpg" onclick="showImage(this)" alt="Image 4">
+    <img src="image/IMG_20240401_215028_343.jpg" onclick="showImage(this)" alt="Image 5">
+    <img src="image/IMG_20240615_223928_656.HEIC" onclick="showImage(this)" alt="Image 6">
+    <img src="image/IMG_20240710_174006_907.JPG" onclick="showImage(this)" alt="Image 7">
+    <img src="image/IMG_20240724_204052_613.jpg" onclick="showImage(this)" alt="Image 8">
+    <img src="image/IMG_20240902_092358_889.JPG" onclick="showImage(this)" alt="Image 9">
+    <img src="image/IMG_20241003_154011_892.jpg" onclick="showImage(this)" alt="Image 10">
+  </div>
+
+  
+  <div id="popup" class="popup" onclick="closePopup()">
+    <img id="popup-img" src="" alt="Popup">
+    <div class="controls" onclick="event.stopPropagation();">
+      <button onclick="prevImage()">Previous</button>
+      <button onclick="nextImage()">Next</button>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+
+  <script src="img.js"></script>
+</body>
+</html>
